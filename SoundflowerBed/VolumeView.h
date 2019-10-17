@@ -12,6 +12,8 @@
     IBOutlet NSSlider *mSlider;
     IBOutlet NSTextField *mLabel;
 }
+- (NSSlider *)slider;
+- (void)setEnabled:(BOOL)enabled;
 - (void)setScalar:(float)scalar;
 - (void)setDB:(float)db;
 @end

@@ -8,11 +8,10 @@
 
 #import "VolumeViewController.h"
 
-@interface VolumeViewController ()
-
-@end
 
 @implementation VolumeViewController
+
+@dynamic view;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,6 +21,13 @@
     }
     
     return self;
+}
+
+- (void)setVolumeSliderTarget:(id)target action:(SEL)selector {
+    VolumeView *aView = (VolumeView *)self.view;
+    NSSlider *slider = [aView slider];
+    slider.target = target;
+    slider.action = selector;
 }
 
 @end
